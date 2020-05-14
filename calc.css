@@ -1,52 +1,159 @@
 * {
+	color: black;
+	margin: auto;
+	box-shadow: 2px 2px 5px #000;
+	border-radius: 10px;
+}
+
+#body {
 	background-color: #333;
+	box-shadow: none;
+	border-style: none;
+}
+
+#container {
+	background-color: #777;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 275px;
+	height: 450px;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	border: 2px solid whitesmoke;
+}
+
+#display {
+	grid-column: 1 / span 4;
+	grid-row: 1 / 1;
+	width: 95%;
+	height: 80%;
+	font-size: 60px;
+	text-align: center;
+	font-family: 'VT323', monospace;
+	background-color: #aaa;
+	color: #000;
+}
+
+.num {
+	outline: none;
+	width: 75%;
+	height: 65%;
+	background-color: #ccc;
+	font-family: 'Dosis', sans-serif;
+	font-size: 30px;
+}
+
+.operator {
+	outline: none;
 	color: whitesmoke;
+	width: 65%;
+	height: 65%;
+	font-family: 'Dosis', sans-serif;
+	font-size: 30px;
 }
 
 #btn0 {
+	grid-column: 2;
+	grid-row: 6;
 }
 
 #btn1 {
+	grid-column: 1;
+	grid-row: 5;
 }
 
 #btn2 {
+	grid-column: 2;
+	grid-row: 5;
 }
 
 #btn3 {
+	grid-column: 3;
+	grid-row: 5;
 }
 
 #btn4 {
+	grid-column: 1;
+	grid-row: 4;
 }
 
 #btn5 {
+	grid-column: 2;
+	grid-row: 4;
 }
 
 #btn6 {
+	grid-column: 3;
+	grid-row: 4;
 }
 
 #btn7 {
+	grid-column: 1;
+	grid-row: 3;
 }
 
 #btn8 {
+	grid-column: 2;
+	grid-row: 3;
 }
 
 #btn9 {
+	grid-column: 3;
+	grid-row: 3;
 }
 
 #plusBtn {
+	grid-column: 4;
+	grid-row: 6;
+	background-color: blue;
 }
 
 #minusBtn {
+	grid-column: 4;
+	grid-row: 5;
+	background-color: blue;
 }
 
 #multiplyBtn {
+	grid-column: 4;
+	grid-row: 4;
+	background-color: blue;
 }
 
 #divideBtn {
+	grid-column: 4;
+	grid-row: 3;
+	background-color: blue;
 }
 
 #equalsBtn {
+	grid-column: 3;
+	grid-row: 6;
+	background-color: green;
+	width: 90%;
+	height: 65%;
 }
 
 #clearBtn {
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	background-color: red;
+	width: 90%;
+	height: 70%;
+}
+
+#decimalBtn {
+	grid-column: 1;
+	grid-row: 6;
+	background-color: #555;
+}
+
+#backspaceBtn {
+	grid-column: 3 / span 2;
+	grid-row: 2;
+	background-color: orange;
+	width: 90%;
+	height: 70%;
 }

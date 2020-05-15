@@ -18,258 +18,252 @@ const decimalBtn = document.querySelector('#decimalBtn');
 const backspaceBtn = document.querySelector('#backspaceBtn');
 const display = document.querySelector('#display');
 
-var nums = [];
-var values = 0;
+var num = '';
+var oldNum = '';
+var addCall = false;
+var subtractCall = false;
+var multiplyCall = false;
+var divideCall = false;
 var calcResult;
 var keypressCode;
 
 btn0.addEventListener('click', () => {
-	nums.push(0);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 96 || keypressCode == 48) {
-		nums.push(0);
-		display.textContent = nums.join('');
-	}
+	num += '0';
+	display.textContent = num;
 });
 
 btn1.addEventListener('click', () => {
-	nums.push(1);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 97 || keypressCode == 49) {
-		nums.push(1);
-		display.textContent = nums.join('');
-	}
+	num += '1';
+	display.textContent = num;
 });
 
 btn2.addEventListener('click', () => {
-	nums.push(2);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 98 || keypressCode == 50) {
-		nums.push(2);
-		display.textContent = nums.join('');
-	}
+	num += '2';
+	display.textContent = num;
 });
 
 btn3.addEventListener('click', () => {
-	nums.push(3);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 99 || keypressCode == 51) {
-		nums.push(3);
-		display.textContent = nums.join('');
-	}
+	num += '3';
+	display.textContent = num;
 });
 
 btn4.addEventListener('click', () => {
-	nums.push(4);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 100 || keypressCode == 52) {
-		nums.push(4);
-		display.textContent = nums.join('');
-	}
+	num += '4';
+	display.textContent = num;
 });
 
 btn5.addEventListener('click', () => {
-	nums.push(5);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 101 || keypressCode == 53) {
-		nums.push(5);
-		display.textContent = nums.join('');
-	}
+	num += '5';
+	display.textContent = num;
 });
 
 btn6.addEventListener('click', () => {
-	nums.push(6);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 102 || keypressCode == 54) {
-		nums.push(6);
-		display.textContent = nums.join('');
-	}
+	num += '6';
+	display.textContent = num;
 });
 
 btn7.addEventListener('click', () => {
-	nums.push(7);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 103 || keypressCode == 55) {
-		nums.push(7);
-		display.textContent = nums.join('');
-	}
+	num += '7';
+	display.textContent = num;
 });
 
 btn8.addEventListener('click', () => {
-	nums.push(8);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 104 || keypressCode == 56) {
-		nums.push(8);
-		display.textContent = nums.join('');
-	}
+	num += '8';
+	display.textContent = num;
 });
 
 btn9.addEventListener('click', () => {
-	nums.push(9);
-	display.textContent = nums.join('');
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 105 || keypressCode == 57) {
-		nums.push(9);
-		display.textContent = nums.join('');
-	}
+	num += '9';
+	display.textContent = num;
 });
 
 plusBtn.addEventListener('click', () => {
-	values++;
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 107) {
-		values++;
-	}
+	add();
 });
 
 multiplyBtn.addEventListener('click', () => {
-	values++;
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 56 || keypressCode == 106) {
-		values++;
-	}
+	multiply();
 });
 
 minusBtn.addEventListener('click', () => {
-	values++;
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 109 || keypressCode == 189) {
-		values++;
-	}
+	subtract();
 });
 
 divideBtn.addEventListener('click', () => {
-	values++;
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 111 || keypressCode == 191) {
-		values++;
-	}
+	divide();
 });
 
 plusBtn.addEventListener('click', () => {
-	values++;
-});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 13) {
-		values++;
-	}
+	add();
 });
 
 equalsBtn.addEventListener('click', () => {
 	operate();
 });
 
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 13) {
-		operate();
-	}
-});
-
 clearBtn.addEventListener('click', () => {
-	nums.splice(0, nums.length);
+	num = '';
+	oldNum = '';
+	addCall = false;
+	subtractCall = false;
+	multiplyCall = false;
+	divideCall = false;
+	calcResult = '';
 	display.textContent = 0;
-	values = 0;
 });
 
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 27) {
-		nums.splice(0, nums.length);
-		display.textContent = 0;
-		values = 0;
-	}
-});
-
-decimalBtn.addEventListener('click', () => {});
-
-addEventListener('keydown', () => {
-	keypressCode = event.keyCode;
-	if (keypressCode == 110 || keypressCode == 190) {
+decimalBtn.addEventListener('click', () => {
+	if (num.includes('.') == false) {
+		num += '.';
+		display.textContent = num;
 	}
 });
 
 backspaceBtn.addEventListener('click', () => {
-	nums.pop();
-	display.textContent = nums.join('');
+	if (num != 0 || num != '') {
+		let backNum = num.substring(0, num.length - 1);
+		num = backNum;
+		if (num != '') {
+			display.textContent = num;
+		} else {
+			display.textContent = 0;
+		}
+	}
 });
 
 addEventListener('keydown', () => {
 	keypressCode = event.keyCode;
-	if (keypressCode == 8) {
-		nums.pop();
-		display.textContent = nums.join('');
+	if (keypressCode == 96 || keypressCode == 48) {
+		num += '0';
+		display.textContent = num;
+	} else if (keypressCode == 97 || keypressCode == 49) {
+		num += '1';
+		display.textContent = num;
+	} else if (keypressCode == 98 || keypressCode == 50) {
+		num += '2';
+		display.textContent = num;
+	} else if (keypressCode == 99 || keypressCode == 51) {
+		num += '3';
+		display.textContent = num;
+	} else if (keypressCode == 100 || keypressCode == 52) {
+		num += '4';
+		display.textContent = num;
+	} else if (keypressCode == 101 || keypressCode == 53) {
+		num += '5';
+		display.textContent = num;
+	} else if (keypressCode == 102 || keypressCode == 54) {
+		num += '6';
+		display.textContent = num;
+	} else if (keypressCode == 103 || keypressCode == 55) {
+		num += '7';
+		display.textContent = num;
+	} else if (keypressCode == 104 || keypressCode == 56) {
+		num += '8';
+		display.textContent = num;
+	} else if (keypressCode == 105 || keypressCode == 57) {
+		num += '9';
+		display.textContent = num;
+	} else if (keypressCode == 107) {
+		add();
+	} else if (keypressCode == 106) {
+		multiply();
+	} else if (keypressCode == 109) {
+		subtract();
+	} else if (keypressCode == 111) {
+		divide();
+	} else if (keypressCode == 13) {
+		operate();
+	} else if (keypressCode == 27) {
+		num = '';
+		oldNum = '';
+		addCall = false;
+		subtractCall = false;
+		multiplyCall = false;
+		divideCall = false;
+		calcResult = '';
+		display.textContent = 0;
+	} else if (keypressCode == 110) {
+		if (num.includes('.') == false) {
+			num += '.';
+			display.textContent = num;
+		}
+	} else if (keypressCode == 8) {
+		if (num != 0 || num != '') {
+			let backNum = num.substring(0, num.length - 1);
+			num = backNum;
+			if (num != '') {
+				display.textContent = num;
+			} else {
+				display.textContent = 0;
+			}
+		}
 	}
 });
 
-function add() {}
+function add() {
+	if (addCall == false) {
+		oldNum = '';
+		oldNum += num;
+		num = '';
+		addCall = true;
+	}
+}
 
-function subtract(nums) {}
+function subtract() {
+	if (subtractCall == false) {
+		oldNum = '';
+		oldNum += num;
+		num = '';
+		subtractCall = true;
+	}
+}
 
-function multiply(nums) {}
+function multiply() {
+	if (multiplyCall == false) {
+		oldNum = '';
+		oldNum += num;
+		num = '';
+		multiplyCall = true;
+	}
+}
 
-function divide(nums) {}
+function divide() {
+	if (divideCall == false) {
+		oldNum = '';
+		oldNum += num;
+		num = '';
+		divideCall = true;
+	}
+}
 
 function operate() {
-	display.textContent = calcResult;
-	nums.splice(0, nums.length);
-	values = 0;
+	if (addCall == true) {
+		calcResult = Number(oldNum) + Number(num);
+		display.textContent = calcResult;
+		num = '';
+		num += calcResult;
+		oldNum = '';
+		addCall = false;
+	} else if (subtractCall == true) {
+		calcResult = Number(oldNum) - Number(num);
+		display.textContent = calcResult;
+		num = '';
+		num = calcResult;
+		oldNum = '';
+		subtractCall = false;
+	} else if (multiplyCall == true) {
+		calcResult = Number(oldNum) * Number(num);
+		display.textContent = calcResult;
+		num = '';
+		num += calcResult;
+		oldNum = '';
+		multiplyCall = false;
+	} else if (divideCall == true) {
+		calcResult = Number(oldNum) / Number(num);
+		display.textContent = calcResult;
+		num = '';
+		num = calcResult;
+		oldNum = '';
+		divideCall = false;
+	}
 }
-/*
-function operationCount() {
-	var values +
-}
-*/

@@ -1,6 +1,5 @@
 #body * {
 	margin: auto;
-	box-shadow: 2px 2px 5px black;
 	border-radius: 10px;
 }
 
@@ -20,6 +19,7 @@
 	grid-template-rows: repeat(6, 1fr);
 	gap: 1px;
 	border: 2px solid #999;
+	box-shadow: 2px 2px 5px black;
 }
 
 #display {
@@ -29,10 +29,11 @@
 	height: 80%;
 	font-size: 60px;
 	text-align: center;
-	font-family: "VT323", monospace;
+	font-family: 'VT323', monospace;
 	background-color: #717171;
 	border: 2px solid #717171;
 	color: black;
+	box-shadow: 2px 2px 5px black;
 }
 
 .num {
@@ -40,10 +41,17 @@
 	width: 75%;
 	height: 65%;
 	background-color: #ccc;
-	font-family: "Dosis", sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-size: 30px;
 	padding-bottom: 10px;
 	border: 2px solid #ccc;
+	box-shadow: 2px 2px 5px black;
+}
+
+.num:active {
+	border: none;
+	box-shadow: none;
+	transform: translate(3px, 3px) scale(0.999, 0.999);
 }
 
 .operator {
@@ -51,9 +59,16 @@
 	color: whitesmoke;
 	width: 75%;
 	height: 65%;
-	font-family: "Dosis", sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-size: 30px;
 	padding-bottom: 10px;
+	box-shadow: 2px 2px 5px black;
+}
+
+.operator:active {
+	border: none;
+	box-shadow: none;
+	transform: translate(3px, 3px) scale(0.999, 0.999);
 }
 
 #btn0 {

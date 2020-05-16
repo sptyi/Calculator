@@ -114,8 +114,13 @@ clearBtn.addEventListener('click', () => {
 
 decimalBtn.addEventListener('click', () => {
 	if (num.includes('.') == false) {
-		num += '.';
-		display.textContent = num;
+		if (!num) {
+			num += '0.';
+			display.textContent = num;
+		} else {
+			num += '.';
+			display.textContent = num;
+		}
 	}
 });
 

@@ -206,6 +206,9 @@ addEventListener('keydown', () => {
 });
 
 function add() {
+	if (subtractCall || multiplyCall || divideCall) {
+		operate();
+	}
 	if (addCall == false) {
 		oldNum = '';
 		oldNum += num;
@@ -215,6 +218,9 @@ function add() {
 }
 
 function subtract() {
+	if (addCall || multiplyCall || divideCall) {
+		operate();
+	}
 	if (subtractCall == false) {
 		oldNum = '';
 		oldNum += num;
@@ -224,6 +230,9 @@ function subtract() {
 }
 
 function multiply() {
+	if (subtractCall || addCall || divideCall) {
+		operate();
+	}
 	if (multiplyCall == false) {
 		oldNum = '';
 		oldNum += num;
@@ -233,6 +242,9 @@ function multiply() {
 }
 
 function divide() {
+	if (subtractCall || multiplyCall || addCall) {
+		operate();
+	}
 	if (divideCall == false) {
 		oldNum = '';
 		oldNum += num;
@@ -263,12 +275,14 @@ function operate() {
 		num += calcResult;
 		oldNum = '';
 		multiplyCall = false;
-	} else if (divideCall == true) {
+	} else if (divideCall == true && num != 0) {
 		calcResult = Number(oldNum) / Number(num);
 		display.textContent = calcResult;
 		num = '';
 		num = calcResult;
 		oldNum = '';
 		divideCall = false;
+	} else {
+		display.textContent = 'How?';
 	}
 }

@@ -25,56 +25,97 @@ var subtractCall = false;
 var multiplyCall = false;
 var divideCall = false;
 var calcResult;
+var expoResult;
 var keypressCode;
 
 btn0.addEventListener('click', () => {
-	num += '0';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '0';
+		display.textContent = num;
+	}
 });
 
 btn1.addEventListener('click', () => {
-	num += '1';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '1';
+		display.textContent = num;
+	}
 });
 
 btn2.addEventListener('click', () => {
-	num += '2';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '2';
+		display.textContent = num;
+	}
 });
 
 btn3.addEventListener('click', () => {
-	num += '3';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '3';
+		display.textContent = num;
+	}
 });
 
 btn4.addEventListener('click', () => {
-	num += '4';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '4';
+		display.textContent = num;
+	}
 });
 
 btn5.addEventListener('click', () => {
-	num += '5';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '5';
+		display.textContent = num;
+	}
 });
 
 btn6.addEventListener('click', () => {
-	num += '6';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '6';
+		display.textContent = num;
+	}
 });
 
 btn7.addEventListener('click', () => {
-	num += '7';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '7';
+		display.textContent = num;
+	}
 });
 
 btn8.addEventListener('click', () => {
-	num += '8';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '8';
+		display.textContent = num;
+	}
 });
 
 btn9.addEventListener('click', () => {
-	num += '9';
-	display.textContent = num;
+	if (num.length >= 9) {
+		return;
+	} else {
+		num += '9';
+		display.textContent = num;
+	}
 });
 
 plusBtn.addEventListener('click', () => {
@@ -139,35 +180,55 @@ backspaceBtn.addEventListener('click', () => {
 addEventListener('keydown', () => {
 	keypressCode = event.keyCode;
 	if (keypressCode == 96 || keypressCode == 48) {
-		num += '0';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '0';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 97 || keypressCode == 49) {
-		num += '1';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '1';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 98 || keypressCode == 50) {
-		num += '2';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '2';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 99 || keypressCode == 51) {
-		num += '3';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '3';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 100 || keypressCode == 52) {
-		num += '4';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '4';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 101 || keypressCode == 53) {
-		num += '5';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '5';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 102 || keypressCode == 54) {
-		num += '6';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '6';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 103 || keypressCode == 55) {
-		num += '7';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '7';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 104 || keypressCode == 56) {
-		num += '8';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '8';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 105 || keypressCode == 57) {
-		num += '9';
-		display.textContent = num;
+		if (num.length <= 9) {
+			num += '9';
+			display.textContent = num;
+		}
 	} else if (keypressCode == 107) {
 		add();
 	} else if (keypressCode == 106) {
@@ -256,30 +317,54 @@ function divide() {
 function operate() {
 	if (addCall == true) {
 		calcResult = Number(oldNum) + Number(num);
-		display.textContent = calcResult;
-		num = '';
-		num += calcResult;
+		if (calcResult.length >= 9) {
+			expoResult = calcResult.toExponential(3);
+			display.textContent = expoResult;
+			num = expoResult;
+			expoResult = '';
+		} else {
+			display.textContent = calcResult;
+			num = calcResult;
+		}
 		oldNum = '';
 		addCall = false;
 	} else if (subtractCall == true) {
 		calcResult = Number(oldNum) - Number(num);
-		display.textContent = calcResult;
-		num = '';
-		num = calcResult;
+		if (calcResult.length >= 9) {
+			expoResult = calcResult.toExponential(3);
+			display.textContent = expoResult;
+			num = expoResult;
+			expoResult = '';
+		} else {
+			display.textContent = calcResult;
+			num = calcResult;
+		}
 		oldNum = '';
 		subtractCall = false;
 	} else if (multiplyCall == true) {
 		calcResult = Number(oldNum) * Number(num);
-		display.textContent = calcResult;
-		num = '';
-		num += calcResult;
+		if (calcResult.length >= 9) {
+			expoResult = calcResult.toExponential(3);
+			display.textContent = expoResult;
+			num = expoResult;
+			expoResult = '';
+		} else {
+			display.textContent = calcResult;
+			num = calcResult;
+		}
 		oldNum = '';
 		multiplyCall = false;
 	} else if (divideCall == true && num != 0) {
 		calcResult = Number(oldNum) / Number(num);
-		display.textContent = calcResult;
-		num = '';
-		num = calcResult;
+		if (calcResult.length >= 9) {
+			expoResult = calcResult.toExponential(3);
+			display.textContent = expoResult;
+			num = expoResult;
+			expoResult = '';
+		} else {
+			display.textContent = calcResult;
+			num = calcResult;
+		}
 		oldNum = '';
 		divideCall = false;
 	} else {

@@ -367,7 +367,7 @@ function operate() {
 		}
 		oldNum = '';
 		divideCall = false;
-	} else {
+	} else if (divideCall == true && num == 0) {
 		display.textContent = 'How?';
 	}
 }

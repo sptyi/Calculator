@@ -267,7 +267,7 @@ addEventListener('keydown', () => {
 });
 
 function add() {
-	if (subtractCall || multiplyCall || divideCall) {
+	if (addCall || subtractCall || multiplyCall || divideCall) {
 		operate();
 	}
 	if (addCall == false) {
@@ -279,7 +279,7 @@ function add() {
 }
 
 function subtract() {
-	if (addCall || multiplyCall || divideCall) {
+	if (subtractCall || addCall || multiplyCall || divideCall) {
 		operate();
 	}
 	if (subtractCall == false) {
@@ -291,7 +291,7 @@ function subtract() {
 }
 
 function multiply() {
-	if (subtractCall || addCall || divideCall) {
+	if (multiplyCall || subtractCall || addCall || divideCall) {
 		operate();
 	}
 	if (multiplyCall == false) {
@@ -303,7 +303,7 @@ function multiply() {
 }
 
 function divide() {
-	if (subtractCall || multiplyCall || addCall) {
+	if (divideCall || subtractCall || multiplyCall || addCall) {
 		operate();
 	}
 	if (divideCall == false) {

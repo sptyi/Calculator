@@ -5,6 +5,7 @@
 
 #body {
 	background-color: #333;
+	text-align: center;
 }
 
 #container {
@@ -182,4 +183,24 @@
 	border: 2px solid orange;
 	width: 90%;
 	height: 70%;
+}
+
+footer {
+	display: inline-block;
+}
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color: blue;
+}
+
+a:hover {
+	color: ghostwhite;
+}
+
+a:active {
+	color: ghostwhite;
 }

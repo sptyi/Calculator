@@ -317,7 +317,7 @@ function divide() {
 function operate() {
 	if (addCall == true) {
 		calcResult = Number(oldNum) + Number(num);
-		if (calcResult.length >= 9) {
+		if (calcResult.toString().length >= 9) {
 			expoResult = calcResult.toExponential(3);
 			display.textContent = expoResult;
 			num = expoResult;
@@ -330,7 +330,7 @@ function operate() {
 		addCall = false;
 	} else if (subtractCall == true) {
 		calcResult = Number(oldNum) - Number(num);
-		if (calcResult.length >= 9) {
+		if (calcResult.toString().length >= 9) {
 			expoResult = calcResult.toExponential(3);
 			display.textContent = expoResult;
 			num = expoResult;
@@ -343,7 +343,7 @@ function operate() {
 		subtractCall = false;
 	} else if (multiplyCall == true) {
 		calcResult = Number(oldNum) * Number(num);
-		if (calcResult.length >= 9) {
+		if (calcResult.toString().length >= 9) {
 			expoResult = calcResult.toExponential(3);
 			display.textContent = expoResult;
 			num = expoResult;
@@ -356,7 +356,7 @@ function operate() {
 		multiplyCall = false;
 	} else if (divideCall == true && num != 0) {
 		calcResult = Number(oldNum) / Number(num);
-		if (calcResult.length >= 9) {
+		if (calcResult.toString().length >= 9) {
 			expoResult = calcResult.toExponential(3);
 			display.textContent = expoResult;
 			num = expoResult;
@@ -368,6 +368,6 @@ function operate() {
 		oldNum = '';
 		divideCall = false;
 	} else if (divideCall == true && num == 0) {
-		display.textContent = 'How?';
+		display.textContent = 'But...how?';
 	}
 }

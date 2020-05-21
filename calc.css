@@ -195,20 +195,22 @@
 
 footer {
 	display: inline-block;
+	font-size: 18px;
 }
 
 a:link {
-	color: blue;
+	color: ghostwhite;
+	text-decoration: none;
 }
 
 a:visited {
-	color: blue;
+	color: ghostwhite;
 }
 
 a:hover {
-	color: ghostwhite;
+	color: black;
 }
 
 a:active {
-	color: ghostwhite;
+	color: black;
 }

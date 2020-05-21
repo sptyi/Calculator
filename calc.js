@@ -183,62 +183,147 @@ addEventListener('keydown', () => {
 		if (num.length <= 9) {
 			num += '0';
 			display.textContent = num;
+			btn0.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn0.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 97 || keypressCode == 49) {
 		if (num.length <= 9) {
 			num += '1';
 			display.textContent = num;
+			btn1.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn1.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 98 || keypressCode == 50) {
 		if (num.length <= 9) {
 			num += '2';
 			display.textContent = num;
+			btn2.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn2.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 99 || keypressCode == 51) {
 		if (num.length <= 9) {
 			num += '3';
 			display.textContent = num;
+			btn3.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn3.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 100 || keypressCode == 52) {
 		if (num.length <= 9) {
 			num += '4';
 			display.textContent = num;
+			btn4.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn4.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 101 || keypressCode == 53) {
 		if (num.length <= 9) {
 			num += '5';
 			display.textContent = num;
+			btn5.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn5.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 102 || keypressCode == 54) {
 		if (num.length <= 9) {
 			num += '6';
 			display.textContent = num;
+			btn6.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn6.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 103 || keypressCode == 55) {
 		if (num.length <= 9) {
 			num += '7';
 			display.textContent = num;
+			btn7.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn7.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 104 || keypressCode == 56) {
 		if (num.length <= 9) {
 			num += '8';
 			display.textContent = num;
+			btn8.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn8.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 105 || keypressCode == 57) {
 		if (num.length <= 9) {
 			num += '9';
 			display.textContent = num;
+			btn9.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				btn9.style.cssText =
+					'border: 2px solid #ccc; box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 107) {
 		add();
+		plusBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			plusBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 106) {
 		multiply();
+		multiplyBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			multiplyBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 109) {
 		subtract();
+		minusBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			minusBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 111) {
 		divide();
+		divideBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			divideBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 13) {
 		operate();
+		equalsBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			equalsBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 27) {
 		num = '';
 		oldNum = '';
@@ -248,15 +333,36 @@ addEventListener('keydown', () => {
 		divideCall = false;
 		calcResult = '';
 		display.textContent = 0;
+		clearBtn.style.cssText =
+			'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+		setTimeout(() => {
+			clearBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+		}, 100);
 	} else if (keypressCode == 110) {
 		if (num.includes('.') == false) {
-			num += '.';
-			display.textContent = num;
+			if (!num) {
+				num += '0.';
+				display.textContent = num;
+			} else {
+				num += '.';
+				display.textContent = num;
+			}
+			decimalBtn.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				decimalBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+			}, 100);
 		}
 	} else if (keypressCode == 8) {
 		if (num != 0 || num != '') {
 			let backNum = num.substring(0, num.length - 1);
 			num = backNum;
+			backspaceBtn.style.cssText =
+				'border: none; box-shadow: none; transform: translate(3px, 3px) scale(0.999, 0.999)';
+			setTimeout(() => {
+				backspaceBtn.style.cssText = 'box-shadow: 2px 2px 5px black;';
+			}, 100);
+
 			if (num != '') {
 				display.textContent = num;
 			} else {

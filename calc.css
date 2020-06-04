@@ -158,8 +158,22 @@
 	border: 2px solid blue;
 }
 
+#percentageBtn {
+	grid-column: 3;
+	grid-row: 2;
+	background-color: blue;
+	border: 2px solid blue;
+}
+
+#negativePositiveBtn {
+	grid-column: 3;
+	grid-row: 6;
+	background-color: #555;
+	border: 2px solid #555;
+}
+
 #equalsBtn {
-	grid-column: 3 / span 2;
+	grid-column: 4;
 	grid-row: 6;
 	background-color: green;
 	border: 2px solid green;
@@ -168,7 +182,7 @@
 }
 
 #clearBtn {
-	grid-column: 1 / span 2;
+	grid-column: 1;
 	grid-row: 2;
 	background-color: red;
 	border: 2px solid red;
@@ -185,7 +199,7 @@
 }
 
 #backspaceBtn {
-	grid-column: 3;
+	grid-column: 2;
 	grid-row: 2;
 	background-color: orange;
 	border: 2px solid orange;
